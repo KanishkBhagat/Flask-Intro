@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Model</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 100px; font-weight: bold; }
+        input, select { padding: 5px; width: 200px; }
+        button { padding: 10px 15px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Restaurant Data</h2>
+
+    <form action="/" method="POST">
+
+        <div class="form-group">
+            <label for="totalbill">Total Bill:</label>
+            <input type="number" id="totalbill" name="totalbill" min="0" max="100" step="0.01" required placeholder="0 - 100">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="smoker">Smoker:</label>
+            <select id="smoker" name="smoker" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="day">Day:</label>
+            <select id="day" name="day" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="Thur">Thursday</option>
+                <option value="Fri">Friday</option>
+                <option value="Sat">Saturday</option>
+                <option value="Sun">Sunday</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <select id="time" name="time" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="size">Party Size:</label>
+            <input type="number" id="size" name="size" min="1" max="10" required placeholder="1 - 10">
+        </div>
+
+        <button type="submit">Submit Data</button>
+    </form>
+
+</body>
+</html>
